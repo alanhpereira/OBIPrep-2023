@@ -198,3 +198,27 @@ int main(){
 * .empty() retorna true se a fila está vazia
 * .pop() tira da frente da fila
 * .front() retorna elemtento na frente da fila
+
+```c++
+#include <queue>
+#include <stdio.h>
+using namespace std;
+
+queue<int> q;
+
+int main(){
+    int n;
+    scanf("%d ", &n);
+    for(int i = 0; i <n ; i++){
+        int t;
+        scanf("%d", &t);
+        if(t == 0){
+            q.pop();
+        }
+        else{
+            q.push(t);
+        }
+        printf("%d\n", q.front());
+    }
+}
+```
