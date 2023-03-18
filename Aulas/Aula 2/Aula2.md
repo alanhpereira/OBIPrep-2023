@@ -176,3 +176,14 @@ int main(){
     return 0;
 }    
 ```
+---
+
+## Pilhas
+
+* `#include <stack>`
+* LIFO (Ultimo a entrar, primeiro a sair)
+* .push(a) adiciona ao topo
+* .size() retorna o número de elementos na pilha
+* .empty() retorna true se a pilha está vazia
+* .pop() tira do top da pilha
+* .top() retorna o elemento do topo
