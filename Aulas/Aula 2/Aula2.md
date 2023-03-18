@@ -142,7 +142,7 @@ int main(){
 * .size() retorna o número de elementos
 * .empty() retorna true se o vector está vazio
 * Acesso é como em um vetor normal usando [] (v[10])
-
+* .clear() esvazia
 ```c++
 #include <vector>
 #include <stdio.h>
@@ -187,7 +187,7 @@ int main(){
 * .empty() retorna true se a pilha está vazia
 * .pop() tira do topo da pilha
 * .top() retorna o elemento do topo
-
+* .clear() esvazia
 ---
 
 ## Filas
@@ -198,7 +198,7 @@ int main(){
 * .empty() retorna true se a fila está vazia
 * .pop() tira da frente da fila
 * .front() retorna elemtento na frente da fila
-
+* .clear() esvazia
 ```c++
 #include <queue>
 #include <stdio.h>
@@ -236,3 +236,4 @@ int main(){
 * .pop_front(a) remove elemento do começo
 * .size() retorna o número de elementos no deque
 * .empty() retorna true se o deque está vazio
+* .clear() esvazia
