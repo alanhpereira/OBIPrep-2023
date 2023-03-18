@@ -117,3 +117,62 @@ int main(){
     return 0;
 }
 ```
+
+---
+
+# STL - Standard Template Library
+
+[CPP Refeference](https://cplusplus.com/reference/)
+
+* Em geral as bibliotecas da STL não tem o .h no final do nome
+* Botar `using namespace std;` para depois dos includes e defines
+* `#include <bits/stdc++.h>` inclui todas da STL
+    * Demora mais para compilar
+    * Arquivo executável maior
+---
+## Vector
+
+* Tamanho dinâmico
+* Similar ao list do python
+* Escolhe-se o tipo do conteudo dentro dos <>
+* Declaração: `vector<int> v;`
+* Vetores de vectors `vector<int> v[MAX]`
+* Vector de vectors `vector< vector<int> > v`
+* .push_back(a) similar ao append do Python
+* .size() retorna o número de elementos
+* .empty() retorna true se o vector está vazio
+* Acesso é como em um vetor normal usando [] (v[10])
+
+```c++
+#include <vector>
+#include <stdio.h>
+#include <utility> //pair
+#define MAX 50
+using namespace std;
+
+vector<int> vec;
+vector<pair<int, int> > adj[MAX];
+
+int main(){
+    int n;
+    scanf("%d",&n);
+    for(int i = 0; i < n; i++){
+        int a;
+        scanf("%d", &a);
+        vec.push_back(a);
+    }
+    printf("%d\n", vec.size());
+    for(int i = 0; i < vec.size(); i++){
+        printf("%d ", vec[i]);
+        vec[i] = i*i;
+    }
+    printf("\n");
+    printf("%d\n", vec.size());
+    for(int i = 0; i < vec.size(); i++){
+        printf("%d ", vec[i]);
+        vec[i] = i*i;
+    }
+    printf("\n");
+    return 0;
+}    
+```
