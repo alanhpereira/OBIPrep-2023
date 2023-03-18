@@ -1,13 +1,3 @@
-# Aula 2 - Vetores, Matrizes e STL
-
-## Vetores
-
-* Listas de elementos acessados por índice
-* Tamanho fix (Pode usar o #define para definir o tamanho)
-* Indexado de 0
-* Leitura com for
-
-```c++
 #include <stdio.h>
 #define MAX 60
 
@@ -30,4 +20,3 @@ int main(){
     }
     return 0;
 }
-```
