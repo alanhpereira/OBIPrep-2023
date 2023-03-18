@@ -185,5 +185,16 @@ int main(){
 * .push(a) adiciona ao topo
 * .size() retorna o número de elementos na pilha
 * .empty() retorna true se a pilha está vazia
-* .pop() tira do top da pilha
+* .pop() tira do topo da pilha
 * .top() retorna o elemento do topo
+
+---
+
+## Filas
+
+* `#include <queue>`
+* LIFO (primeiro a entrar, primeiro a sair)* .push(a) adiciona ao fim da fila
+* .size() retorna o número de elementos na fila
+* .empty() retorna true se a fila está vazia
+* .pop() tira da frente da fila
+* .front() retorna elemtento na frente da fila
