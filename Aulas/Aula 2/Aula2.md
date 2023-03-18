@@ -222,3 +222,17 @@ int main(){
     }
 }
 ```
+
+---
+
+## Deque
+
+* `#include <deque>`
+* Double ended queue
+* Pode remover ou adicionar elementos as duas pontas
+* .push_back(a) adiciona elemento ao final
+* .push_front(a) adiciona elemento ao começo
+* .pop_back(a) remove elemento do final
+* .pop_front(a) remove elemento do começo
+* .size() retorna o número de elementos no deque
+* .empty() retorna true se o deque está vazio
