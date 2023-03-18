@@ -181,6 +181,7 @@ int main(){
 ## Pilhas
 
 * `#include <stack>`
+* `stack<int> stk;`
 * LIFO (Ultimo a entrar, primeiro a sair)
 * .push(a) adiciona ao topo
 * .size() retorna o número de elementos na pilha
@@ -193,6 +194,7 @@ int main(){
 ## Filas
 
 * `#include <queue>`
+* `queue<int> q;`
 * LIFO (primeiro a entrar, primeiro a sair)* .push(a) adiciona ao fim da fila
 * .size() retorna o número de elementos na fila
 * .empty() retorna true se a fila está vazia
@@ -228,6 +230,7 @@ int main(){
 ## Deque
 
 * `#include <deque>`
+* `deque <int> dq;`
 * Double ended queue
 * Pode remover ou adicionar elementos as duas pontas
 * .push_back(a) adiciona elemento ao final
