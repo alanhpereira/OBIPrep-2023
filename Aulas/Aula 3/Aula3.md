@@ -36,3 +36,37 @@ int main(){
 }
 ```
 ---
+## Map
+* `#include <map>`
+* `map<int, int> mp;`
+* Similar o dict do Python, só que o tipo da chave é definido(O primeiro elemento da declaração do map)
+* Pode-se usar qualquer tipo comparável(o operador < é válido>)
+* .size() retorna o número de elementos no map
+* .clear() esvazia
+* .empty() retorna true se o map está vazio
+* .find(k) retorna iterador pra posição que o elemento se encontra(nulo caso não exista) - O(log n)
+* Acesso como um vetor normal usando [] - O(log n)
+```c++
+#include <stdio.h>
+#include <map>
+using namespace std;
+
+map<int, int> m;
+
+int main(){
+    int n;
+    for(int i = 0; i < n; i++){
+        int p, v;
+        scanf("%d %d", &p, &v);
+        if(v == 0){
+            printf("m[%d] = %d\n",p, m[p]);
+        }
+        else{
+            m[p] = v;
+        }
+    }
+}
+```
+
+
+
