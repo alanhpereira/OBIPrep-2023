@@ -67,6 +67,20 @@ int main(){
     }
 }
 ```
+### Iterar map(passar por todos elementos válidos)
+* Complexidade O(n log n)
+```c++
+    for(map<int, int>::iterator it = m.begin(); it != m.end(); it++){
+        printf("m[%d] = %d\n", it -> first, it -> second);
+        // (*it).first => it->first
+        // first é a chave, second o valor
+    }
+```
+ * A partir do c++11 da pra usar o auto invés de `map<int, int>::iterator`
 
 
-
+```c++
+    for(auto it = m.begin(); it != m.end(); it++){
+        printf("m[%d] = %d\n", it -> first, it -> second);
+    }
+```
