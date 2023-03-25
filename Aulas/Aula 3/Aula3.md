@@ -1,4 +1,4 @@
-# Aula 3 - STL, continuação
+# Aula 3 - STL(continuação) e Complexidade
 
 ## Priority queue
 
@@ -84,3 +84,68 @@ int main(){
         printf("m[%d] = %d\n", it -> first, it -> second);
     }
 ```
+---
+# Complexidade
+
+## Notação O
+
+* Notação que representa quanto tempo o algoritmo demora para rodar em função da entrada
+* Complexidade comuns
+    * O($1$) - Tempo constante, não depende da entrada
+    * O($log_2n$) - Tempo logarítmico, entrada, tempo aumenta em 1
+    * O($n$) - Tempo linear, entrada dobra, tempo dobra
+    * O($n^2$) - Tempo quadrático, entrada dobra, tempo quadruplica
+    * O($2^n$) - Tempo exponecial, entrada aumenta em 1, tempo dobra
+    * O($n!$) - Tempo fatorial, entrada aumenta em 1, tempo é multiplicado por n
+* É possível multiplicar complexidades
+    * Um algoritmo que faz n operações O(log n) tem complexidade O(n * log n)
+* Quando se soma duas complexidades, prevalece a maior
+    * Roda-se um algoritmo complexidade O($n^2$) e em seguida outro de O($n$), a complexidade total é O($n^2$)
+    * Complexiade de um polinómio resulta apenas no elemento de maior ordem
+* Ignora-se constantes multiplicando O(2*n) => O(n)
+* Em geral assume-se que o computador roda $10^8$ operações por segundo, e na OBI em geral o código tem tempo limite de 1s para rodar pra uma determina entrada
+    * Um código O($n!$) pode passar com limite de n até 10
+    * Um código O($2^n$) pode passar com limite de n até 20
+    * Um código O($n^4$) pode passar com limite de n até 100
+    * Um código O($n^3$) pode passar com limite de n até 500 mas não 1000
+    * Um código O($n^2 * logn$) pode passar com limite de n até 1000
+    * Um código O($n^2$) pode passar com limite de n até 1000
+    * Um código O($n * logn$) pode passar com limite de n até $10^6$
+    * Um código O($n$) pode passar com limite de n até $10^8$
+    * Um código O($log n$) pode passar com limite de n até $10^{3000000}$, mas por limites de tamanho de váriável, em geral se limita a $10^{18}$ limite do long long
+
+### Algoritmos comuns
+* Acessar uma posição de um vetor ou matriz
+    * O(1)
+    ```c++
+    a = v[i]
+    ```
+* Leitura de vetor
+    * O($n$)
+    ```c++
+    for(int i = 0; i < n; i++){
+        scanf("%d", &v[i]);
+    }
+    ```
+* Leitura de matrix n*n
+    * O($n^2$)
+    ```c++
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < m; j++){
+            scanf("%d", &n[i][j]);
+        }
+    }
+    ```
+* Ordenação por sort de biblioteca
+    * O($n log n$)
+    ```c++
+    sort(v.begin(), v.end());
+    ```
+    
+* Busca binária
+    * O($log n$)
+
+### O que é log?
+* O inverso da exponecial
+* $2^x = a$ => $log_2a = x$
+* Cada vez mais lento pra crescer
