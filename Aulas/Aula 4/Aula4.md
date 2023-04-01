@@ -96,6 +96,17 @@ Divide-se k vezes o vetor em 2 até chegar nos elementos unitários, $\frac{n}{2
 ### O(n log n)
 
 
-![Merge Sort](https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif)
+![Merge Sort](https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif)  
 
+---
 
+## Sort da algorithm
+
+* `#include <algorithm>`
+* Para vetores normais
+    * `sort(v, v+n)` onde v é o vetor a ser ordenado e n o número de elementos a ser ordenado
+* Para vectors
+    * `sort(v.begin(), v.end())` onde v é o vector ser ordenado;
+    * `sort(v.rbegin(), v.rend())` onde v é o vector ser ordenado reversamente
+    * `sort(v.begin(), v.end(), greater<int>())` onde v é o vector ser ordenado reversamente
+    
