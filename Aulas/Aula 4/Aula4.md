@@ -110,3 +110,20 @@ Divide-se k vezes o vetor em 2 até chegar nos elementos unitários, $\frac{n}{2
     * `sort(v.rbegin(), v.rend())` onde v é o vector ser ordenado reversamente
     * `sort(v.begin(), v.end(), greater<int>())` onde v é o vector ser ordenado reversamente
     
+---
+
+## Pairs
+* Juntam dois elementos em uma única variavel `pair<int, int>`
+* Podem ser dois tipos distintos `pair<int, vector<int> >`, `pair<pair<int, int> ,int>` 
+* Pode-se encadear os pair a vontade `pair<pair<pair<int , int>, int >, pair<int, int> >`
+* Acesso usando `.first` e `.second`
+* Tambem se encadeia `.first` e `.second` para acessar pair complexo `.first.fisrt.second`
+* Na ordenação de pairs, quando o primeiro é igual desempate pelo segundo : (1, 1) < (1, 2)
+* Frequentemente usado defines para abreviar o .first e .second como por exemplo `#define X first` ,`#define Y second`, `#define F first`, `#define S second`
+* Usado o typedef abreviar a definação futura de pairs:
+    * `typedef pair<int, int> pii;`
+    * `typedef pair<int, pii> piii;`
+    * `typedef pair<pii, pii> piiii;`
+    * `pii a` -> `pair<int, int> a`
+    * `a = pii(4, 3)`
+    * `piii b = piii(3, pii(4, 2))`
