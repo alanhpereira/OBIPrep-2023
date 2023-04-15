@@ -36,3 +36,17 @@ int bb(int i, int j, int e){
     return bb(i, mid , e);
 }
 ```
+
+### Implementação iterativa
+
+```c++
+int bb(int i, int j, int e){
+    int mid;
+    while(i < j){
+        mid = (i+j)/2;
+        if(e > v[mid]) i = mid + 1;
+        else j = mid; 
+    }
+    return mid;
+}
+```
