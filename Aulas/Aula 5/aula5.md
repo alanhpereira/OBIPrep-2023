@@ -50,3 +50,10 @@ int bb(int i, int j, int e){
     return mid;
 }
 ```
+
+### Exercícios
+
+[BSEARCH1 - Binary search](https://www.spoj.com/problems/BSEARCH1/)  
+[Ogros](https://olimpiada.ic.unicamp.br/pratique/p2/2008/f1/ogros/)  
+[Pão a metro](https://olimpiada.ic.unicamp.br/pratique/p1/2007/f2/metro/)  
+[AGGRCOW - Aggressive cows](https://www.spoj.com/problems/AGGRCOW/)
