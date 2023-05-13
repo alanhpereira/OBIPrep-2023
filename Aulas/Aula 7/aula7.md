@@ -53,6 +53,59 @@ A existencia de uma aresta entre u e v é dada pela existencia ou não de um ele
 
 * ### Lista de Arestas
 
-São guardadas todas as arestas de um grafo em uma única lista. Usadado normalmente em algoritmos de construção de grafos.
+São guardadas todas as arestas de um grafo em uma única lista. Usadado normal   mente em algoritmos de construção de grafos.
 
 --- 
+
+## Trassevia de Grafos
+
+Existem de percorrer um grafo, a busca em profundidade e a busca em largura. Ambas percorrem todos os nós que podem ser alcançados por um nó inicial. A diferença é a ordem em que percorre
+
+### Busca em profundidade
+
+A busca em profundidade é um algoritmo simples que enquanto ele achar nós não visitados do nó atual, ele começa a percorrer o nó não visitado. Quando não há nos não vistados adjacentes ao nó atual, ele volta ao anterior e continua sua busca daí.
+
+```c++
+
+vector <int> adj[MAX];
+int vis[MAX];
+
+void dfs(int a){
+    vis[a] = true;
+    for(int i= 0 ; i< adj[a],size(); i++){
+        if(!vis[adj[a][i]]){
+            dfs(adj[a][i]);
+        }
+    }
+}
+
+```
+
+### Busca em largura
+
+A busca em largura é uma busca que percorre o grafo em ordem de distância do nó inicial, para isso é usado uma fila para organizar os nós a serem percorridos.
+
+```c++
+
+vector <int> adj[MAX];
+int dist[MAX]; //iniciado com -1;
+
+void bfs(int a){
+    queue<int> q;
+    dist[a] = 0;
+    q.push(a);
+    while(!q.empty()){
+        a=q.front();
+        q.pop(); // as vezes a gente esquece de tirar o cara da frente da fila
+        for(auto e : adj[a]){
+            if(dist[e] == -1){
+                dist[e] = dist[a] + 1;
+                q.push(e);
+            }
+        }
+    }
+}
+
+```
+
+---
