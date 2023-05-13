@@ -109,3 +109,11 @@ void bfs(int a){
 ```
 
 ---
+
+## Conectividade
+
+Um grafo é conexo quando é possível chegar a todos os nós de qualquer nó. Quando estamos lidando com grafos não direcionais, é necessário apenas conferir se a partir de um nó qualquer é possível chegar em todos os outros, já que o caminho de volta tambem é possível.
+A componente conexa de um nó são todos os nós aos quais se consegue chegar do nó inicial.
+
+Para conferir conectivade, usamos uma simples dfs, e depois conferimos quais nós foram percorridos.
+
