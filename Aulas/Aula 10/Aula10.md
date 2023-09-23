@@ -40,3 +40,57 @@ int dijkstra() {
 	return dist[n + 1];
 }
 ```
+
+## Union Find
+O estrutura de Union Find consiste em varios conjuntos de nós, e possui dois tipos de operação: Consulta e união
+* Consulta: confere se dois nós estão no mesmo conjunto
+* União: caso dois nós não estejam no mesmo conjunto, junta os componentes.  
+[Artigo de refêrencia](https://www.geeksforgeeks.org/union-by-rank-and-path-compression-in-union-find-algorithm/)
+### Implementação:
+
+* Cada nó tem um pai, inicialmente o próprio nó.
+* Cada conjunto tem um representante cujo pai é ele mesmo.
+* O representante de um conjunto pode ser achado percorrendo a estrutura subindo para os pais até encontrar um qual o pai é si próprio
+* Dois nós pertecem ao mesmo conjunto caso tenham o mesmo representante
+* Para juntar dois conjuntos, se diz que o pai de um dos representantes é o outro representante.
+
+### Otimizações
+
+* Path compression  
+    * Em operações de consulta, se comprime o caminho para futuras operações; Essa compressão é realizada redefinindo-se o pai para o representante do grupo
+* Union by rank
+    * Em uniões escolhe o representante com maior rank para ser o novo representante, e o de menor rank vai ser filho do de maior rank
+    * Existem vários tipos de ranking, como altura total, número de elementos, entre outros
+
+### Código
+
+```c++
+//inicialização
+void init(int n){    
+	for (int i = 1; i <= n; i++) {
+		p[i] = i;
+		rank[i] = 1;
+	}
+}
+
+//find com path compression
+int find(int a) {
+	if (p[a] == a) return a;
+	return p[a] = find(p[a]);
+}
+
+//join com union by rank
+void join(int a, int b) {
+	a = find(a);
+	b = find(b);
+	if (a == b) return;
+	if (rank[a] > rank[b]) {
+		p[b] = a;
+		rank[a] += rank[b];
+	}
+	else {
+		p[a] = b;
+		rank[b] += rank[a];
+	}
+}
+```
