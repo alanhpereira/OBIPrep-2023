@@ -94,3 +94,29 @@ void join(int a, int b) {
 	}
 }
 ```
+
+## Árvores geradoras: Algoritmo de Kruskal
+
+Árvores geradoras são utilizadas para alguns algoritmos gulosos, consistem em selecionar arestas de um grafo de forma que o resultado seja uma árvore(grafo acíclico)
+
+O algoritmo de Kruskal consiste em:  
+1. Ordenar arestas por peso
+2. Processar arestas em sequência:  
+    1. Se as duas pontas da arestas forem de compontentes distintos:
+    2. Adicionar aresta no grafo
+    3. Juntar as duas components
+
+```c++
+	sort(edges.begin(), edges.end());
+	int ans = 0;
+	for (int i = 0; i < edges.size(); i++) {
+		int u, v, w;
+		w = edges[i].F;
+		u = edges[i].S.F;
+		v = edges[i].S.S;
+		if (find(u) != find(v)) {
+			ans += w;
+			join(u, v);
+		}
+	}
+```
