@@ -5,6 +5,7 @@
 * Similar a uma BFS
 * Temos uma fila de nós a serem computados
 * Um vetor de menor distância já achada para cada nó
+* O Truque de botar os elementos na fila com a distância total negativada para deixar em ordem crescente, uma vez que priority_queue por padráo ordena de maneira decrescente
 ```c++
 
 vector<pii> adj[MAX];
