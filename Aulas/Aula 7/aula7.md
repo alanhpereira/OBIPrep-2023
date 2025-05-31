@@ -72,7 +72,7 @@ int vis[MAX];
 
 void dfs(int a){
     vis[a] = true;
-    for(int i= 0 ; i< adj[a],size(); i++){
+    for(int i= 0 ; i< adj[a].size(); i++){
         if(!vis[adj[a][i]]){
             dfs(adj[a][i]);
         }
