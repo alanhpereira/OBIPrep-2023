@@ -41,7 +41,7 @@ void add(int k, int x) {
 
 ```c++
 void update(int idx, int l, int r, int i, int v){
-    if(i > l || i < r) return; // valor atualizado fora do intervalo
+    if(i > r || i < l) return; // valor atualizado fora do intervalo
     if(l == r){ // condição de parada, intervalo unitário
         seg[idx] = v;
         return;
